@@ -2,8 +2,8 @@ name: Build and publish image
 on:
   release:
     types: [published]
-  schedule:
-    - cron: '0 3 * * 1'
+  # schedule:
+    # - cron: '0 3 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
               with:
                 tag: latest,1.0.0
                 platform: linux/amd64,linux/arm64,linux/arm/v7
-                imageName: ilteoood/vscode-remote-tunnels
+                imageName: onni22/vscode-remote-tunnels
                 publish: true
-                dockerUser: ilteoood
+                dockerUser: onni22
                 dockerPassword: ${{ secrets.DOCKER_HUB_PASSWORD }}

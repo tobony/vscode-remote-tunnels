@@ -16,11 +16,11 @@ jobs:
               with:
                 tag: latest,1.0.0
                 platform: linux/amd64,linux/arm64,linux/arm/v7
-                imageName: ilteoood/vscode-remote-tunnels
+                imageName: onni22/vscode-remote-tunnels
             - name: Scan image
               uses: anchore/scan-action@v2
               with:
-                image: "ilteoood/vscode-remote-tunnels:latest"
+                image: "onni22/vscode-remote-tunnels:latest"
                 fail-build: true
                 acs-report-enable: true
                 severity-cutoff: critical
